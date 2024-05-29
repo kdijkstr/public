@@ -1,3 +1,4 @@
+/* edit heading section above form - hide map, h1, etc. - used when adding a different header (i.e., Mac Fest, Reunion) */
 div#register_map {
   display: none
 }
@@ -10,6 +11,8 @@ p#register_location {
 h1 {
   display: none
 }
+
+/* add border around form and heading section, inside of web wrapper */
 div#content {
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -18,11 +21,29 @@ div#content {
   margin: 0 auto;
 }
 
+/* add an asterisk to required fields */
 .form_question[data-required="1"] .form_label::after {
   color: #EF4F26;
   content: " *";
   font-weight: bold;
 }
+
+/* adjust related event widget text */
+.form_related_date:before {
+  content: "Register for: ";
+  font-weight: bold;
+}
+
+/* format headers between registrant blocks */
+tr.column>th {
+  background:#01426A;
+  color: white;
+}
+tr.header {
+  display: none;
+}
+
+/* format "add registrant/guest" button */
 a.replicate_insert {
   padding: 6px 12px;
   border: 1px solid black;
@@ -42,13 +63,8 @@ a.replicate_insert:hover {
 a.replicate_delete {
   color: white;
 }
-tr.column>th {
-  background:#01426A;
-  color: white;
-}
-tr.header {
-  display: none;
-}
+
+/* format submit form button */
 button.default.form_button_submit {
   padding: 6px 12px;
   border: 1px solid black;
@@ -62,8 +78,4 @@ button.default.form_button_submit {
   border-radius: 2px;
   line-height: 1;
   letter-spacing: 0.7px;
-}
-.form_related_date:before {
-  content: "Register for: ";
-  font-weight: bold;
 }
